@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FaFacebookF, FaHeart, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { footerLink1, footerLink2, footerLink3 } from '../data/data'
 import { BsGeoAltFill, BsTelephoneInbound } from 'react-icons/bs'
+import Logo from './logo'
 
 export default function FooterLight() {
   return (
@@ -13,8 +14,8 @@ export default function FooterLight() {
 
                 <div className="col-12 col-md-5 col-lg-12 col-xl-4">
                     <div className="footer-widget pe-xl-4 mb-5">
-                        <div className="footerLogo"><img src='/img/logo.svg' className="img-fluid" width="160" alt="Footer Logo"/></div>
-                        <div className="footerText"><p>© {new Date().getFullYear()} ListingHub. Develop with <FaHeart className="ms-1 text-danger"></FaHeart>  By <Link href="https://shreethemes.in/" target="_blank">Shreethemes</Link></p></div>
+                        <div className="footerLogo"><Logo width={160} imgClassName="img-fluid" navClass="" /></div>
+                        <div className="footerText"><p>© {new Date().getFullYear()} QTick. Develop with <FaHeart className="ms-1 text-danger"></FaHeart>  By <Link href="https://shreethemes.in/" target="_blank">Shreethemes</Link></p></div>
                         <div className="footerSocialwrap">
                             <ul className="footersocial">
                                 <li><Link href="#" className="social-link"><FaFacebookF/></Link></li>
@@ -54,7 +55,7 @@ export default function FooterLight() {
 
                 <div className="col-6 col-md-4 col-lg-3 col-xl-2">
                     <div className="footer-widget">
-                        <h4 className="widget-title">ListingHub Business</h4>
+                        <h4 className="widget-title">QTick Business</h4>
                         <ul className="footer-menu">
                             {footerLink3.map((item,index)=>{
                                  return(

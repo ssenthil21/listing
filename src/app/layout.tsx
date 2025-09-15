@@ -6,8 +6,8 @@ import 'animate.css/animate.css'
 
 
 export const metadata: Metadata = {
-  title: "ListingHub - Next Ts Business Directory & Listing Template",
-  description: "ListingHub - Next Ts Business Directory & Listing Template",
+  title: "QTick - Business Directory & Listing Template",
+  description: "QTick - Business Directory & Listing Template",
 };
 
 export default function RootLayout({
