@@ -7,6 +7,7 @@ import { FiX } from 'react-icons/fi';
 import { BiSolidShoppingBagAlt } from 'react-icons/bi'
 import Link from 'next/link';
 import Logo from '../logo';
+import Image from 'next/image';
 
 
 export default function NavbarLight() {
