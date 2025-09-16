@@ -21,8 +21,34 @@
   transform: translateY(-2px);
 }
 
-.landing-header .advertising-slot {
+.landing-header .advertising-slot,
+.landing-hero .advertising-slot {
   border-left: 4px solid var(--bs-primary);
+}
+
+.landing-hero__banner {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.landing-hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.landing-hero__form {
+  max-width: 420px;
+  margin-left: auto;
+}
+
+@media (max-width: 991.98px) {
+  .landing-hero__form {
+    margin-left: 0;
+  }
 }
 
 .vendor-hero {

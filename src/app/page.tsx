@@ -1,6 +1,5 @@
 import LandingHeader from "./components/landing/header/landing-header";
 import SearchSection from "./components/landing/search/search-section";
-import CategoryGrid from "./components/landing/category-grid";
 import PopularBusinesses from "./components/landing/popular-businesses";
 import TestimonialsSection from "./components/landing/testimonials-section";
 import RecentActivities from "./components/landing/recent-activities";
@@ -15,7 +14,6 @@ export default function Home() {
     <SearchProvider>
       <LandingHeader />
       <SearchSection />
-      <CategoryGrid />
       <PopularBusinesses />
       <TestimonialsSection />
       <RecentActivities />
