@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import Logo from '../logo'
 
 import { FaLinkedin } from 'react-icons/fa6'
 import { BsGeoAltFill, BsTelephoneOutbound } from 'react-icons/bs'
@@ -15,8 +15,8 @@ export default function Footer() {
                 <div className="row">
                     <div className="col-12 col-md-5 col-lg-12 col-xl-4">
                         <div className="footer-widget pe-xl-4 mb-5">
-                            <div className="footerLogo"><Image src='/img/logo-light.svg' width={0} height={0} sizes='100vw' style={{width:'160px', height:'auto'}} className="img-fluid"  alt="Footer Logo"/></div>
-                            <div className="footerText"><p>© {new Date().getFullYear()} ListingHub. Develop with <FaHeart className="ms-1 text-danger"></FaHeart>  By Shreethemes</p></div>
+                            <div className="footerLogo"><Logo width={160} imgClassName="img-fluid" navClass="" /></div>
+                            <div className="footerText"><p>© {new Date().getFullYear()} QTick. Develop with <FaHeart className="ms-1 text-danger"></FaHeart>  By Shreethemes</p></div>
                             <div className="footerSocialwrap">
                                 <ul className="footersocial">
                                     <li><Link href="#" className="social-link"><FaFacebookF className=""/></Link></li>
@@ -56,7 +56,7 @@ export default function Footer() {
 
                     <div className="col-6 col-md-4 col-lg-3 col-xl-2">
                         <div className="footer-widget">
-                            <h4 className="widget-title">ListingHub Business</h4>
+                            <h4 className="widget-title">QTick Business</h4>
                             <ul className="footer-menu">
                                 {footerLink3.map((item,index)=>{
                                     return(

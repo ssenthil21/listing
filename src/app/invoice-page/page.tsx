@@ -2,6 +2,7 @@ import React from 'react'
 import NavbarDark from '../components/navbar/navbar-dark'
 import Link from 'next/link'
 import { BsDownload, BsPrinter } from 'react-icons/bs'
+import Logo from '../components/logo'
 
 export default function Invoice() {
   return (
@@ -21,7 +22,7 @@ export default function Invoice() {
 									</address>
 									<Link href="#" className="fw-medium text-primary">hello@sugar.cogen.com</Link>
 								</div>
-								<img src='/img/logo.svg' width="150" className="img-fluid" alt="Logo"/>
+                                                                <Logo width={150} imgClassName="img-fluid" navClass="" />
 							</div>
 							<div className="mb-4">
 								<h3 className="m-0">Tax Invoice <span className="badge badge-success rounded-pill">PAID</span></h3>

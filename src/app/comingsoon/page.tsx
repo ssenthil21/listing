@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { FaHome } from 'react-icons/fa'
+import Logo from '../components/logo'
 
 export default function ComingSoon() {
   return (
@@ -10,7 +11,7 @@ export default function ComingSoon() {
                 <div className="container position-relative z-2">
                     <div className="row align-items-center justify-content-center">
                         <div className="col-xl-7 col-lg-9 col-md-11 col-12">
-                            <div className="logo-brand text-center mb-4"><img src='/img/logo-light.svg' className="img-fluid" width="250" alt=""/></div>
+                            <div className="logo-brand text-center mb-4"><Logo width={250} imgClassName="img-fluid" navClass="" /></div>
                             <div className="capsheadings text-center mb-5">
                                 <h1 className="text-light">Our product launch is just around the corner.</h1>
                                 <p className="text-light fs-5 opacity-75">Subscribe using the form below nd we will alert you as soon as we launch.</p>
