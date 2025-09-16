@@ -1,0 +1,85 @@
+:root {
+  --qtick-soft-primary: rgba(13, 110, 253, 0.12);
+  --qtick-soft-light: rgba(255, 255, 255, 0.2);
+}
+
+.bg-soft-primary {
+  background-color: var(--qtick-soft-primary) !important;
+}
+
+.bg-soft-light {
+  background-color: var(--qtick-soft-light) !important;
+}
+
+.bg-light-hover {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bg-light-hover:hover,
+.bg-light-hover:focus-visible {
+  background-color: #f5f7ff;
+  transform: translateY(-2px);
+}
+
+.landing-header .advertising-slot {
+  border-left: 4px solid var(--bs-primary);
+}
+
+.vendor-hero {
+  min-height: 420px;
+}
+
+.vendor-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.vendor-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+}
+
+.vendor-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.vendor-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.vendor-slider img,
+.vendor-slider video {
+  border-radius: 1.5rem;
+}
+
+.thumb {
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  outline: 2px solid transparent;
+  transition: transform 0.2s ease, outline-color 0.2s ease;
+}
+
+.thumb:hover,
+.thumb:focus-visible {
+  transform: translateY(-2px);
+  outline-color: var(--bs-primary);
+}
+
+.thumb--active {
+  outline-color: var(--bs-primary);
+}
+
+@media (max-width: 767.98px) {
+  .landing-header .display-5 {
+    font-size: 2rem;
+  }
+}

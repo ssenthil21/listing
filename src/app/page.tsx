@@ -1,105 +1,28 @@
-import Link from "next/link";
-import NavbarDark from "./components/navbar/navbar-dark";
-import FormOne from "./components/form/form-one";
-import HeroBanner from "./components/banner/hero-banner";
-import BrandImage from "./components/brand-image";
-import CategoryOne from "./components/categories/category-one";
-import PopularListingOne from "./components/popular-listing-one";
-import ClientOne from "./components/client-one";
-import BlogOne from "./components/blog-one";
-import FooterTop from "./components/footer-top";
+import LandingHeader from "./components/landing/header/landing-header";
+import SearchSection from "./components/landing/search/search-section";
+import CategoryGrid from "./components/landing/category-grid";
+import PopularBusinesses from "./components/landing/popular-businesses";
+import TestimonialsSection from "./components/landing/testimonials-section";
+import RecentActivities from "./components/landing/recent-activities";
+import VipPromotions from "./components/landing/vip-promotions";
+import NewsSection from "./components/landing/news-section";
 import Footer from "./components/footer/footer";
 import BackToTop from "./components/back-to-top";
+import { SearchProvider } from "./components/search/search-context";
 
 export default function Home() {
   return (
-    <>
-     <NavbarDark/>
-
-     <HeroBanner
-        backgroundImage="/img/banner-1.jpg"
-        title="Explore Your Perfect Places"
-        subtitle="Browse high-rated hotels, restaurants, attractions, activities and more!"
-      >
-        <FormOne/>
-        <div className="row align-items-center justify-content-center">
-          <div className="col-xl-12 col-lg-12 col-md-12 col-12 mb-2">
-            <div className="text-center"><h6 className="fw-semibold">Explore Popular Categories</h6></div>
-          </div>
-          <div className="col-xl-12 col-lg-12 col-md-12 col-md-12 col-12">
-            <div className="popularSearches d-flex align-items-center justify-content-center column-gap-3 row-gap-1 flex-wrap">
-              <div className="singleItem"><Link href="#" className="badge badge-transparent rounded-pill">Real Estate</Link></div>
-              <div className="singleItem"><Link href="#" className="badge badge-transparent rounded-pill">Eat & Drink</Link></div>
-              <div className="singleItem"><Link href="#" className="badge badge-transparent rounded-pill">Shopping</Link></div>
-              <div className="singleItem"><Link href="#" className="badge badge-transparent rounded-pill">Nightlife</Link></div>
-              <div className="singleItem"><Link href="#" className="badge badge-transparent rounded-pill">Services</Link></div>
-            </div>
-          </div>
-        </div>
-      </HeroBanner>
-
-          <section className="py-4 pb-0">
-            <div className="container">
-               <BrandImage/>
-            </div>
-        </section>
-
-        <section className="pb-0" id="mains">
-            <div className="container">
-                <div className="row align-items-center justify-content-center">
-                    <div className="col-xl-7 col-lg-8 col-md-11 col-sm-12">
-                        <div className="secHeading-wrap text-center">
-                            <h3 className="sectionHeading">Hot & Trending <span className="text-primary">Categories</span></h3>
-                            <p>Explore all types of popular category for submit your listings</p>
-                        </div>
-                    </div>
-                </div>
-              <CategoryOne/>
-            </div>
-        </section>
-
-        <section>
-            <div className="container">
-                <div className="row align-items-center justify-content-center">
-                    <div className="col-xl-7 col-lg-8 col-md-11 col-sm-12">
-                        <div className="secHeading-wrap text-center">
-                            <h3 className="sectionHeading">Trending & Popular <span className="text-primary">Listings</span></h3>
-                            <p>Explore Hot & Popular Business Listings</p>
-                        </div>
-                    </div>
-                </div>
-                <PopularListingOne/>
-            </div>
-        </section>
-        <section className="bg-light">
-            <div className="container">
-                <div className="row align-items-center justify-content-center">
-                    <div className="col-xl-7 col-lg-8 col-md-11 col-sm-12">
-                        <div className="secHeading-wrap text-center">
-                            <h3 className="sectionHeading">Our Great <span className="text-primary">Reviews</span></h3>
-                            <p>Our cliens love our services and give great & positive reviews</p>
-                        </div>
-                    </div>
-                </div>
-               <ClientOne/>
-            </div>
-        </section>
-        <section>
-            <div className="container">
-                <div className="row align-items-center justify-content-center">
-                    <div className="col-xl-7 col-lg-8 col-md-11 col-sm-12">
-                        <div className="secHeading-wrap text-center">
-                            <h3 className="sectionHeading">Latest Updates <span className="text-primary">News</span></h3>
-                            <p>Join ListingHub and get latest & trending updates about listing</p>
-                        </div>
-                    </div>
-                </div>
-                <BlogOne/>
-            </div>
-        </section>
-        <FooterTop/>
-        <Footer/>
-        <BackToTop/>
-    </>
+    <SearchProvider>
+      <LandingHeader />
+      <SearchSection />
+      <CategoryGrid />
+      <PopularBusinesses />
+      <TestimonialsSection />
+      <RecentActivities />
+      <VipPromotions />
+      <NewsSection />
+      <Footer />
+      <BackToTop />
+    </SearchProvider>
   );
 }
