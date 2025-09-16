@@ -15,7 +15,11 @@ export interface Category {
   id: string;
   name: string;
   slug: string;
-  icon: ComponentType<{ className?: string }>;
+  icon: ComponentType<{
+    className?: string;
+    size?: number | string;
+    "aria-hidden"?: boolean;
+  }>;
   description?: string;
   featured?: boolean;
 }

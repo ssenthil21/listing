@@ -30,7 +30,7 @@ const CategoryGrid = () => {
                 className="w-100 text-start border rounded-4 p-4 h-100 bg-light-hover"
                 onClick={() => handleNavigate(category.slug)}
               >
-                <category.icon className="text-primary mb-3" size={28} aria-hidden="true" />
+                <category.icon className="text-primary mb-3" size={28} aria-hidden={true} />
                 <h5 className="fw-semibold mb-1">{category.name}</h5>
                 <p className="text-secondary small mb-0">{category.description}</p>
               </button>

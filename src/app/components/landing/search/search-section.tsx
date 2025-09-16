@@ -54,7 +54,7 @@ const SearchSection = () => {
             {landingCategories.slice(0, 6).map((category) => (
               <div className="col-6 col-md-4 col-lg-3" key={category.id} role="listitem">
                 <div className="border rounded-4 p-3 h-100">
-                  <category.icon className="text-primary mb-2" size={24} aria-hidden="true" />
+                  <category.icon className="text-primary mb-2" size={24} aria-hidden={true} />
                   <h6 className="fw-semibold mb-1">{category.name}</h6>
                   <p className="text-secondary small mb-0">{category.description}</p>
                 </div>

@@ -16,14 +16,17 @@ import Footer from "../../components/footer/footer";
 import BackToTop from "../../components/back-to-top";
 import { getVendorBySlug, vendorProfiles } from "../../data/vendors";
 
-interface VendorPageProps {
-  params: {
-    id: string;
-  };
-}
+type VendorRouteParams = {
+  id: string;
+};
 
-export async function generateMetadata({ params }: VendorPageProps): Promise<Metadata> {
-  const vendor = getVendorBySlug(params.id);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<VendorRouteParams>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const vendor = getVendorBySlug(id);
   if (!vendor) {
     return {
       title: "Vendor not found | Qtick",
@@ -40,8 +43,13 @@ export function generateStaticParams() {
   return vendorProfiles.map((vendor) => ({ id: vendor.slug }));
 }
 
-const VendorPage = ({ params }: VendorPageProps) => {
-  const vendor = getVendorBySlug(params.id);
+const VendorPage = async ({
+  params,
+}: {
+  params: Promise<VendorRouteParams>;
+}) => {
+  const { id } = await params;
+  const vendor = getVendorBySlug(id);
 
   if (!vendor) {
     notFound();
