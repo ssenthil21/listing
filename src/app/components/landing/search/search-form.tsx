@@ -162,7 +162,7 @@ const SearchForm = ({ onSearch }: SearchFormProps) => {
                     onChange={handleRatingChange}
                     allowCross={false}
                     ariaLabelForHandle={["Minimum rating", "Maximum rating"]}
-                    ariaValueTextFormatter={(value) => `${value.toFixed(1)} stars`}
+                    ariaValueTextFormatterForHandle={(value) => `${value.toFixed(1)} stars`}
                   />
                   <div className="rating-range__labels mt-2">
                     <span>Min: {formValues.ratingRange[0].toFixed(1)} ★</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { Suspense, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -266,9 +266,22 @@ const ListingsContent = () => {
   );
 };
 
+const ListingsFallback = () => (
+  <>
+    <NavbarUnauthenticated />
+    <div className="container py-5 my-5 text-center" role="status" aria-live="polite">
+      <div className="spinner-border text-primary" role="presentation" aria-hidden={true} />
+      <p className="mt-3 mb-0 fw-medium text-secondary">Loading listings…</p>
+    </div>
+    <Footer />
+  </>
+);
+
 const ListingsPage = () => (
   <SearchProvider dataset={landingBusinesses}>
-    <ListingsContent />
+    <Suspense fallback={<ListingsFallback />}>
+      <ListingsContent />
+    </Suspense>
   </SearchProvider>
 );
 
