@@ -130,6 +130,7 @@ export interface Business {
 export interface SearchFormValues {
   location: string;
   keywords: string;
+  ratingRange: [number, number];
 }
 
 export interface SearchContextValue {

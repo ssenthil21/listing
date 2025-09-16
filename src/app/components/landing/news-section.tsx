@@ -10,7 +10,7 @@ const NewsSection = () => {
           <div className="col-lg-8">
             <h2 className="fw-bold">Latest updates</h2>
             <p className="text-secondary mb-0">
-              Learn how Qtick is evolving and how to get the most from your business profile.
+              Learn how QTick is evolving and how to get the most from your business profile.
             </p>
           </div>
         </div>

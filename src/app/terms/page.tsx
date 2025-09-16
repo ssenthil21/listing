@@ -8,7 +8,7 @@ export default function TermsPage() {
           <div className="col-lg-8">
             <h1 className="fw-bold mb-4">Terms &amp; Conditions</h1>
             <p className="text-secondary">
-              Welcome to Qtick Biz Profile. These terms outline the rules and regulations for the use of our website and services. By accessing or using Qtick, you agree to comply with these terms.
+              Welcome to QTick. These terms outline the rules and regulations for the use of our website and services. By accessing or using QTick, you agree to comply with these terms.
             </p>
             <h2 className="h4 mt-4">1. Vendor Responsibilities</h2>
             <p className="text-secondary">
@@ -20,7 +20,7 @@ export default function TermsPage() {
             </p>
             <h2 className="h4 mt-4">3. Payments &amp; Promotions</h2>
             <p className="text-secondary">
-              Paid promotions and featured placements are clearly labelled. All promotional content must follow Qtick&apos;s advertising guidelines.
+              Paid promotions and featured placements are clearly labelled. All promotional content must follow QTick&apos;s advertising guidelines.
             </p>
             <h2 className="h4 mt-4">4. Privacy</h2>
             <p className="text-secondary">

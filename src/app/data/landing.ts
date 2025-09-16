@@ -413,7 +413,7 @@ export const landingTestimonials: Testimonial[] = [
     author: "Daniel Reed",
     role: "Vendor Partner",
     rating: 5,
-    content: "Qtick helped us reach a 30% increase in qualified leads within the first month.",
+    content: "QTick helped us reach a 30% increase in qualified leads within the first month.",
     avatar: "/img/team-2.jpg",
   },
   {
@@ -437,7 +437,7 @@ export const landingTestimonials: Testimonial[] = [
 export const landingActivities: Activity[] = [
   {
     id: "activity-1",
-    title: "Qtick launches vendor academy",
+    title: "QTick launches vendor academy",
     description: "Upskill with on-demand workshops on brand storytelling and lead nurturing.",
     publishedOn: "2024-12-05",
     category: "Announcement",
@@ -491,7 +491,7 @@ export const landingPromotions: Promotion[] = [
 export const landingNews: NewsArticle[] = [
   {
     id: "news-1",
-    title: "How Qtick personalises discovery for returning users",
+    title: "How QTick personalises discovery for returning users",
     excerpt: "Understand the data signals that power our recommendation engine.",
     publishedOn: "2024-12-12",
     link: "#",
