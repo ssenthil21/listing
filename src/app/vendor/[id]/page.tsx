@@ -29,12 +29,12 @@ export async function generateMetadata({
   const vendor = getVendorBySlug(id);
   if (!vendor) {
     return {
-      title: "Vendor not found | Qtick",
+      title: "Vendor not found | QTick",
     };
   }
 
   return {
-    title: `${vendor.name} | Qtick Vendor Profile`,
+    title: `${vendor.name} | QTick Vendor Profile`,
     description: vendor.tagline,
   };
 }

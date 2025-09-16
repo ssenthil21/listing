@@ -8,8 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import { landingCategories } from "../../../data/landing";
-import BusinessCard from "../business-card";
-import { useSearch } from "../../search/search-context";
 
 import "swiper/css";
 
@@ -26,10 +24,6 @@ const CATEGORY_IMAGES = [
 
 const SearchSection = () => {
   const router = useRouter();
-  const { results, query, isSearching, clearSearch } = useSearch();
-
-  const hasQuery = Boolean(query.location.trim() || query.keywords.trim());
-  const hasResults = results.length > 0;
 
   const trendingCategories = useMemo(
     () =>
@@ -113,57 +107,20 @@ const SearchSection = () => {
           </div>
         </div>
 
-        {hasQuery && (
-          <div className="mt-5">
-            <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2 mb-4">
-              <div>
-                <h2 className="fw-bold mb-1">Search results</h2>
-                <p className="mb-0 text-secondary">
-                  Showing matches for <strong>{query.keywords || "all services"}</strong> in {" "}
-                  <strong>{query.location || "all locations"}</strong>
-                </p>
-              </div>
-              <button type="button" className="btn btn-sm btn-outline-secondary" onClick={clearSearch}>
-                Clear search
-              </button>
-            </div>
-
-            {isSearching && <div className="alert alert-info">Searching businesses...</div>}
-
-            {hasResults ? (
-              <div className="row g-4">
-                {results.map((business) => (
-                  <div className="col-md-6 col-lg-4" key={business.id}>
-                    <BusinessCard business={business} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              !isSearching && (
-                <div className="alert alert-warning" role="status">
-                  No listings matched your filters. Try broadening your keywords or exploring another category above.
-                </div>
-              )
-            )}
+        <div className="mt-4">
+          <h6 className="fw-semibold">Featured marketplace tools</h6>
+          <div className="d-flex flex-wrap gap-2">
+            <Link href="#promotions" className="badge bg-soft-primary text-primary rounded-pill px-3 py-2">
+              View VIP promotions
+            </Link>
+            <Link href="#testimonials" className="badge bg-soft-primary text-primary rounded-pill px-3 py-2">
+              Hear from customers
+            </Link>
+            <Link href="#news" className="badge bg-soft-primary text-primary rounded-pill px-3 py-2">
+              Explore platform news
+            </Link>
           </div>
-        )}
-
-        {!hasQuery && !isSearching && (
-          <div className="mt-4">
-            <h6 className="fw-semibold">Related tools</h6>
-            <div className="d-flex flex-wrap gap-2">
-              <Link href="#promotions" className="badge bg-soft-primary text-primary rounded-pill px-3 py-2">
-                View VIP promotions
-              </Link>
-              <Link href="#testimonials" className="badge bg-soft-primary text-primary rounded-pill px-3 py-2">
-                Hear from customers
-              </Link>
-              <Link href="#news" className="badge bg-soft-primary text-primary rounded-pill px-3 py-2">
-                Explore platform news
-              </Link>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </section>
   );

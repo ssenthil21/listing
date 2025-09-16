@@ -10,7 +10,7 @@ const RecentActivities = () => {
           <div className="col-lg-8">
             <h2 className="fw-bold">Recent activities &amp; resources</h2>
             <p className="text-secondary mb-0">
-              Stay informed with platform updates, community stories, and educational content from Qtick.
+              Stay informed with platform updates, community stories, and educational content from QTick.
             </p>
           </div>
         </div>

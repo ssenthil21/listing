@@ -8,6 +8,7 @@ import { IoClose } from "react-icons/io5";
 import { BsChevronDown, BsDoorOpenFill } from "react-icons/bs";
 
 import { useAuth } from "../../providers/auth-context";
+import Brand from "./brand";
 
 interface NavItem {
   label: string;
@@ -16,6 +17,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: "Dashboard", href: "/dashboard-user" },
+  { label: "Demo", href: "/demo" },
   { label: "My Listings", href: "/dashboard-my-listings" },
   { label: "Categories", href: "#categories" },
   { label: "Support", href: "/help-center" },
@@ -30,9 +32,7 @@ const NavbarAuthenticated = () => {
     <div className="bg-white shadow-sm border-bottom">
       <div className="container py-3">
         <div className="d-flex align-items-center justify-content-between">
-          <Link href="/" className="navbar-brand fw-bold fs-4 text-primary">
-            Qtick Biz Profile
-          </Link>
+          <Brand />
           <button
             className="btn btn-link d-lg-none"
             aria-label={isMobileMenuOpen ? "Close navigation" : "Open navigation"}

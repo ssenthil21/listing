@@ -10,6 +10,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { landingBusinesses, landingCategories } from "../../data/landing";
 import { useAuth } from "../providers/auth-context";
 import { useSearch } from "../search/search-context";
+import { isDefaultRatingRange } from "../../utils/search";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -204,8 +205,15 @@ const PopularBusinesses = () => {
 
         {results.length > 0 && (
           <div className="alert alert-success mt-4" role="status">
-            We used your latest search for <strong>{query.keywords}</strong> in {" "}
-            <strong>{query.location}</strong> to prioritise similar businesses.
+            We used your latest search for <strong>{query.keywords || "all services"}</strong> in {" "}
+            <strong>{query.location || "all locations"}</strong>
+            {!isDefaultRatingRange(query.ratingRange) && (
+              <>
+                {" "}with ratings between {query.ratingRange[0].toFixed(1)}★ and {" "}
+                {query.ratingRange[1].toFixed(1)}★
+              </>
+            )}
+            {" "}to prioritise similar businesses.
           </div>
         )}
       </div>

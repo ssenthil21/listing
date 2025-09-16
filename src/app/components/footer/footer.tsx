@@ -100,7 +100,7 @@ export default function Footer() {
             </div>
             <div className="container-fluid border-top pt-3 pb-3">
                 <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between gap-3">
-                    <p className="mb-0 small text-muted">Stay connected with Qtick for industry insights, compliance updates, and community stories.</p>
+                    <p className="mb-0 small text-muted">Stay connected with QTick for industry insights, compliance updates, and community stories.</p>
                     <div className="d-flex flex-wrap gap-2">
                         <Link href="/list-layout-01" className="badge bg-soft-primary text-primary rounded-pill">Browse Listings</Link>
                         <Link href="/dashboard-add-listing" className="badge bg-soft-primary text-primary rounded-pill">Add Your Business</Link>

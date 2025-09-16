@@ -24,9 +24,9 @@ const TestimonialsSection = () => {
       <div className="container">
         <div className="row align-items-start g-4">
           <div className="col-lg-5">
-            <h2 className="fw-bold">What people say about Qtick</h2>
+            <h2 className="fw-bold">What people say about QTick</h2>
             <p className="text-secondary">
-              Real reviews from vendors and customers demonstrate how Qtick drives trust and growth on both
+              Real reviews from vendors and customers demonstrate how QTick drives trust and growth on both
               sides of the marketplace.
             </p>
             <div className="d-flex gap-2 mt-3">

@@ -28,10 +28,10 @@
 
 .landing-hero__banner {
   position: relative;
-  min-height: 50vh;
+  min-height: 650px;
   display: flex;
   align-items: center;
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .landing-hero__content {
@@ -41,7 +41,7 @@
 }
 
 .landing-hero__form {
-  max-width: 420px;
+  max-width: 100%;
   margin-left: auto;
 }
 
@@ -49,6 +49,42 @@
   .landing-hero__form {
     margin-left: 0;
   }
+}
+
+.brand-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 2px dashed rgba(13, 110, 253, 0.4);
+  background-color: rgba(13, 110, 253, 0.08);
+  color: var(--bs-primary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-range-control .rc-slider {
+  padding: 0 12px;
+}
+
+.rating-range-control .rc-slider-track {
+  background-color: var(--bs-primary);
+}
+
+.rating-range-control .rc-slider-handle {
+  border-color: var(--bs-primary);
+  box-shadow: none;
+}
+
+.rating-range__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: rgba(33, 37, 41, 0.7);
 }
 
 .vendor-hero {

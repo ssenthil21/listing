@@ -8,6 +8,7 @@ import { BsPersonPlus, BsBoxArrowInRight } from "react-icons/bs";
 
 import { useAuth } from "../../providers/auth-context";
 import type { User } from "../../../types/models";
+import Brand from "./brand";
 
 interface NavItem {
   label: string;
@@ -16,6 +17,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Demo", href: "/demo" },
   { label: "Vendors", href: "/list-layout-01" },
   { label: "Categories", href: "#categories" },
   { label: "Testimonials", href: "#testimonials" },
@@ -43,9 +45,7 @@ const NavbarUnauthenticated = () => {
     <div className="bg-white shadow-sm border-bottom">
       <div className="container py-3">
         <div className="d-flex align-items-center justify-content-between">
-          <Link href="/" className="navbar-brand fw-bold fs-4 text-primary">
-            Qtick Biz Profile
-          </Link>
+          <Brand />
           <button
             className="btn btn-link d-lg-none"
             aria-label={isMobileMenuOpen ? "Close navigation" : "Open navigation"}
